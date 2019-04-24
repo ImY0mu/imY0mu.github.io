@@ -92,7 +92,7 @@ function notifications(name, level, id, type){
 
   notificationsList["span"+id].innerHTML += texts[Math.floor(Math.random() * texts.length)];
   document.getElementById("boss").addEventListener('click', function() {
-      game_frame.src = "http://simple-mmo.com/user/view/" + id;
+      game_frame.src = "//simple-mmo.com/user/view/" + id;
       notificationsClear(notificationsList["span"+id]);
       load();
   });
@@ -114,7 +114,7 @@ function getBosses(){
   checker = true;
   var counter = [];
   try {
-    $.get('http://simple-mmo.com/worldbosses', null, function(text){
+    $.get('//simple-mmo.com/worldbosses', null, function(text){
       timeText = $(text).find('.panel-body').html().split("\n");
     });
   } catch (e) {
@@ -191,7 +191,7 @@ function createBoss(id, name, level, time, avatar){
     cBoss.appendChild(button);
     $("#bossView" + id).attr("data-dismiss","modal");
     button.addEventListener('click', function() {
-      game_frame.src = "http://simple-mmo.com/user/view/" + id;
+      game_frame.src = "//simple-mmo.com/user/view/" + id;
       load();
     });
     createTimer(time, id, level, name);
@@ -251,7 +251,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Cannot attack";
           timers["button"+id].className = "btn btn-warning view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/view/' + id;
+              game_frame.src = '//simple-mmo.com/user/view/' + id;
               load();
           });
         }
@@ -263,7 +263,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Attack";
           timers["button"+id].className = "btn btn-success view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/attack/' + id;
+              game_frame.src = '//simple-mmo.com/user/attack/' + id;
               load();
           });
         }
@@ -275,7 +275,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Attack";
           timers["button"+id].className = "btn btn-danger view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/attack/' + id;
+              game_frame.src = '//simple-mmo.com/user/attack/' + id;
               load();
           });
         }
@@ -312,7 +312,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Cannot attack";
           timers["button"+id].className = "btn btn-warning view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/view/' + id;
+              game_frame.src = '//simple-mmo.com/user/view/' + id;
               load();
           });
         }
@@ -321,7 +321,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Attack";
           timers["button"+id].className = "btn btn-success view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/attack/' + id;
+              game_frame.src = '//simple-mmo.com/user/attack/' + id;
               load();
           });
         }
@@ -330,7 +330,7 @@ function createTimer(time, id, level, name){
           timers["button"+id].innerText = "Attack";
           timers["button"+id].className = "btn btn-danger view";
           timers["button"+id].addEventListener('click', function() {
-              game_frame.src = 'http://simple-mmo.com/user/attack/' + id;
+              game_frame.src = '//simple-mmo.com/user/attack/' + id;
               load();
           });
         }
@@ -349,7 +349,7 @@ function updateChat(){
     //console.log("Loading..")
     //loader.style.display = "block";
     xmlhttpC = new XMLHttpRequest();
-    urlC = "http://simple-mmo.com/chatapi";
+    urlC = "//simple-mmo.com/chatapi";
     xmlhttpC.open("GET", urlC, true);
     xmlhttpC.send();
     xmlhttpC.onreadystatechange = function() {
@@ -369,7 +369,7 @@ function updateChat(){
 function send(){
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://simple-mmo.com/chat/submit", true);
+        xhr.open("POST", "//simple-mmo.com/chat/submit", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
           chattext: text.value
@@ -397,7 +397,7 @@ function refresh(){
       myArrC[item].username = '<span id="you">' + myArrC[item].username + '</span>';
     }
     var container = document.createElement("div"); container.className  = "chat-message clearfixr";
-    var img = document.createElement("img"); img.alt = "Avatar"; img.src= 'http://simple-mmo.com/img/sprites/' + myArrC[item].avatar + '.png';
+    var img = document.createElement("img"); img.alt = "Avatar"; img.src= '//simple-mmo.com/img/sprites/' + myArrC[item].avatar + '.png';
     var time = document.createElement("span"); time.className = "chat-time"; time.id = "time"; time.innerText = myArrC[item].created_at2;
     var by = document.createElement("h5"); by.id = "by"; by.innerHTML = '<a href="#" class=' + myArrC[item].userid + '>' + myArrC[item].username +'</a>';
     var message = document.createElement("p"); message.id = "message"; message.innerHTML = myArrC[item].text;
@@ -429,7 +429,7 @@ function refresh(){
 
 function redirect(id){
   load();
-  game_frame.src = "http://simple-mmo.com/user/view/" + id;
+  game_frame.src = "//simple-mmo.com/user/view/" + id;
 }
 
 
@@ -465,7 +465,7 @@ function updateClock() {
 
 function questPointsLoad(){
   try{
-    $.get('http://simple-mmo.com/quests/viewall', null, function(text){
+    $.get('//simple-mmo.com/quests/viewall', null, function(text){
       questPointCount = $(text).find('#questPoints').text();
     });
     setTimeout(function() {
@@ -483,7 +483,7 @@ function questPointsLoad(){
 
 
 function eggsLoad(){
-  var urLink = "http://simple-mmo.com/inventory?minlevel=&maxlevel=&itemname=Easter+Egg";
+  var urLink = "//simple-mmo.com/inventory?minlevel=&maxlevel=&itemname=Easter+Egg";
   var eggCount;
   var counter;
   $.get(urLink, null, function(text){
@@ -525,7 +525,7 @@ function eggsLoad(){
 }
 
 function gEggsLoad(){
-  var urLinkG = "http://simple-mmo.com/inventory?minlevel=&maxlevel=&itemname=Golden+Egg";
+  var urLinkG = "//simple-mmo.com/inventory?minlevel=&maxlevel=&itemname=Golden+Egg";
   var gEggCount;
   var counter;
   $.get(urLinkG, null, function(text){
@@ -566,8 +566,8 @@ function gEggsLoad(){
 }
 
 function updateCharacter(){
-    $('#character').load('http://simple-mmo.com/character .mdl-list__item');
-    $('#bank').load('http://simple-mmo.com/bank .mdl-card__supporting-text strong');
+    $('#character').load('//simple-mmo.com/character .mdl-list__item');
+    $('#bank').load('//simple-mmo.com/bank .mdl-card__supporting-text strong');
 }
 
 (function() {
@@ -605,7 +605,7 @@ function updateCharacter(){
 function loadPlayer(){
     //console.log("Loading..")
     xmlhttp = new XMLHttpRequest();
-    url = "http://simple-mmo.com/mobapi";
+    url = "//simple-mmo.com/mobapi";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function() {
@@ -624,7 +624,7 @@ function loadPlayer(){
 document.addEventListener('DOMContentLoaded', function() {
     game_frame = document.getElementById("game_frame");
     agent = navigator.userAgent + " | CHROME EXTENSION";
-    game_frame.src = "http://simple-mmo.com/";
+    game_frame.src = "//simple-mmo.com/";
     travelBtn = document.getElementById("travelBtn");
     townBtn = document.getElementById("townBtn");
     arenaBtn = document.getElementById("arenaBtn");
@@ -853,92 +853,92 @@ document.addEventListener('DOMContentLoaded', function() {
     switch (btn) {
       case "travel":
         load();
-        game_frame.src = "http://simple-mmo.com/travel";
+        game_frame.src = "//simple-mmo.com/travel";
         break;
 
       case "town":
         load();
-        game_frame.src = "http://simple-mmo.com/town";
+        game_frame.src = "//simple-mmo.com/town";
         break;
 
       case "arena":
         load();
-        game_frame.src = "http://simple-mmo.com/npcs/viewall";
+        game_frame.src = "//simple-mmo.com/npcs/viewall";
         break;
 
       case "bosses":
         load();
         getBosses();
-        game_frame.src = "http://simple-mmo.com/worldbosses";
+        game_frame.src = "//simple-mmo.com/worldbosses";
         break;
 
       case "notifications":
         load();
-        game_frame.src = "http://simple-mmo.com/events";
+        game_frame.src = "//simple-mmo.com/events";
         break;
 
       case "messages":
         load();
-        game_frame.src = "http://simple-mmo.com/messages/inbox";
+        game_frame.src = "//simple-mmo.com/messages/inbox";
         break;
 
       case "guilds":
         load();
-        game_frame.src = "http://simple-mmo.com/guilds/menu";
+        game_frame.src = "//simple-mmo.com/guilds/menu";
         break;
 
       case "quests":
         load();
-        game_frame.src = "http://simple-mmo.com/quests/viewall";
+        game_frame.src = "//simple-mmo.com/quests/viewall";
         break;
       case "character":
         load();
-        game_frame.src = "http://simple-mmo.com/user/character";
+        game_frame.src = "//simple-mmo.com/user/character";
         break;
 
       case "inventory":
         load();
-        game_frame.src = "http://simple-mmo.com/inventory";
+        game_frame.src = "//simple-mmo.com/inventory";
         break;
 
       case "leaderboards":
         load();
-        game_frame.src = "http://simple-mmo.com/leaderboards";
+        game_frame.src = "//simple-mmo.com/leaderboards";
         break;
 
       case "community":
         load();
-        game_frame.src = "http://simple-mmo.com/community";
+        game_frame.src = "//simple-mmo.com/community";
         break;
 
       case "store":
         load();
-        game_frame.src = "http://simple-mmo.com/diamondstore";
+        game_frame.src = "//simple-mmo.com/diamondstore";
         break;
 
       case "friends":
         load();
-        game_frame.src = "http://simple-mmo.com/friends";
+        game_frame.src = "//simple-mmo.com/friends";
         break;
 
       case "profile":
         load();
-        game_frame.src = "http://simple-mmo.com/me";
+        game_frame.src = "//simple-mmo.com/me";
         break;
 
       case "preferences":
         load();
-        game_frame.src = "http://simple-mmo.com/preferences";
+        game_frame.src = "//simple-mmo.com/preferences";
         break;
 
       case "about":
       load();
-        game_frame.src = "http://simple-mmo.com/about";
+        game_frame.src = "//simple-mmo.com/about";
         break;
 
       case "support":
       load();
-        game_frame.src = "http://simple-mmo.com/support";
+        game_frame.src = "//simple-mmo.com/support";
         break;
 
       case "aboutEx":
@@ -948,12 +948,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
       case "game":
         load();
-        game_frame.src = "http://simple-mmo.com/";
+        game_frame.src = "//simple-mmo.com/";
         break;
 
       default:
         load();
-        game_frame.src = "http://simple-mmo.com/";
+        game_frame.src = "//simple-mmo.com/";
         break;
     }
   }
@@ -974,7 +974,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function update(){
     try{
       stepsSpan.innerText = myArr.stepsleft;
-      avatarSpan.src = 'http://simple-mmo.com/img/sprites/' + myArr.avatar + '.png';
+      avatarSpan.src = '//simple-mmo.com/img/sprites/' + myArr.avatar + '.png';
       nameSpan.innerText =  myArr.username;
       levelSpan.innerText =  myArr.level;
       energySpan.innerText = myArr.energy + " / " + myArr.max_energy;
