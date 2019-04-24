@@ -994,31 +994,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-
-  chrome.webRequest.onBeforeSendHeaders.addListener(
-      function(info) {
-          // Replace the User-Agent header
-          var headers = info.requestHeaders;
-          headers.forEach(function(header, i) {
-              if (header.name.toLowerCase() == 'user-agent') {
-                  header.value = agent;
-              }
-          });
-          return {requestHeaders: headers};
-      },
-      // Request filter
-      {
-          // Modify the headers for these pages
-          urls: [
-              "http://simple-mmo.com/*"
-          ],
-          // In the main window and frames
-          types: ["main_frame", "sub_frame", "xmlhttprequest"]
-      },
-      ["blocking", "requestHeaders"]
-  );
-
-
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
