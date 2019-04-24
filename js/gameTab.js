@@ -165,10 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
       menu("profile");
     });
 
-    nameSpan.addEventListener('click', function() {
-      menu("profile");
-    });
-
     storeBtn.addEventListener('click', function() {
       menu("store");
     });
