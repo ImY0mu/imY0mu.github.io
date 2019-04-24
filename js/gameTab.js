@@ -452,3 +452,17 @@ function startTime() {
     startTime()
   }, 500);
 }
+
+
+
+function load(){
+  questPointsLoad();
+  loadPlayer();
+  window.setInterval(function(){
+      update();
+    }, 500);
+}
+
+window.onload = function() {
+  load();
+}
