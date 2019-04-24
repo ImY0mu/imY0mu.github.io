@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     profileBtn = document.getElementById("profileBtn");
     storeBtn = document.getElementById("storeBtn");
     preferencesBtn = document.getElementById("preferencesBtn");
-    aboutBtn = document.getElementById("aboutBtn");
     supportBtn = document.getElementById("supportBtn");
     supportBtn = document.getElementById("supportBtn");
     homeWikiBtn = document.getElementById("homeWikiBtn");
@@ -185,10 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
       menu("game");
     });
 
-    aboutLink.addEventListener('click', function() {
-      menu("aboutEx");
-    });
-
   });
 
 
@@ -284,11 +279,6 @@ document.addEventListener('DOMContentLoaded', function() {
       case "support":
       
         game_frame.src = "//simple-mmo.com/support";
-        break;
-
-      case "aboutEx":
-        
-        game_frame.src = chrome.extension.getURL('about.html');
         break;
 
       case "game":
