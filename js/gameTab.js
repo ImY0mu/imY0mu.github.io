@@ -43,68 +43,68 @@ document.addEventListener('DOMContentLoaded', function() {
     collectiblesWikiBtn = document.getElementById("collectiblesWikiBtn");
     questsWikiBtn.addEventListener('click', function() {
         game_frame.src = 'https://simplemmo.fandom.com/wiki/List_of_Quests';
-        load();
+        
     });
 
 
     helmetsWikiBtn.addEventListener('click', function() {
         game_frame.src = 'https://simplemmo.fandom.com/wiki/List_of_Helmets';
-        load();
+        
     });
 
     amuletsWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Amulets';
-        load();
+        
     });
 
     armourWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Armour';
-        load();
+        
     });
 
     shieldsWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Shields';
-        load();
+        
     });
 
     weaponsWikiBtn.addEventListener('click', function() {
        game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Weapons';
-       load();
+       
     });
 
     bootsWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Boots';
-        load();
+        
     });
 
     petsWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Pets';
-        load();
+        
     });
 
     booksWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Books';
-        load();
+        
     });
 
     foodWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Food';
-        load();
+        
     });
 
     collectiblesWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/List_of_Collectibles';
-        load();
+        
     });
 
     homeWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/Home';
-        load();
+        
     });
 
     arenaWikiBtn.addEventListener('click', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/Battle_arena';
-        load();
+        
     });
 
 
@@ -201,107 +201,107 @@ document.addEventListener('DOMContentLoaded', function() {
   function menu(btn){
     switch (btn) {
       case "travel":
-        load();
+        
         game_frame.src = "//simple-mmo.com/travel";
         break;
 
       case "town":
-        load();
+        
         game_frame.src = "//simple-mmo.com/town";
         break;
 
       case "arena":
-        load();
+        
         game_frame.src = "//simple-mmo.com/npcs/viewall";
         break;
 
       case "bosses":
-        load();
+        
         getBosses();
         game_frame.src = "//simple-mmo.com/worldbosses";
         break;
 
       case "notifications":
-        load();
+        
         game_frame.src = "//simple-mmo.com/events";
         break;
 
       case "messages":
-        load();
+        
         game_frame.src = "//simple-mmo.com/messages/inbox";
         break;
 
       case "guilds":
-        load();
+        
         game_frame.src = "//simple-mmo.com/guilds/menu";
         break;
 
       case "quests":
-        load();
+        
         game_frame.src = "//simple-mmo.com/quests/viewall";
         break;
       case "character":
-        load();
+        
         game_frame.src = "//simple-mmo.com/user/character";
         break;
 
       case "inventory":
-        load();
+        
         game_frame.src = "//simple-mmo.com/inventory";
         break;
 
       case "leaderboards":
-        load();
+        
         game_frame.src = "//simple-mmo.com/leaderboards";
         break;
 
       case "community":
-        load();
+        
         game_frame.src = "//simple-mmo.com/community";
         break;
 
       case "store":
-        load();
+        
         game_frame.src = "//simple-mmo.com/diamondstore";
         break;
 
       case "friends":
-        load();
+        
         game_frame.src = "//simple-mmo.com/friends";
         break;
 
       case "profile":
-        load();
+        
         game_frame.src = "//simple-mmo.com/me";
         break;
 
       case "preferences":
-        load();
+        
         game_frame.src = "//simple-mmo.com/preferences";
         break;
 
       case "about":
-      load();
+      
         game_frame.src = "//simple-mmo.com/about";
         break;
 
       case "support":
-      load();
+      
         game_frame.src = "//simple-mmo.com/support";
         break;
 
       case "aboutEx":
-        load();
+        
         game_frame.src = chrome.extension.getURL('about.html');
         break;
 
       case "game":
-        load();
+        
         game_frame.src = "//simple-mmo.com/";
         break;
 
       default:
-        load();
+        
         game_frame.src = "//simple-mmo.com/";
         break;
     }
