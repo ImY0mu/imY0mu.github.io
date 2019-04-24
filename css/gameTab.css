@@ -82,11 +82,6 @@ img {
   background-color: var(--body);
 }
 
-
-.dropdown-menu:active{
-  background-color: var(--button);
-}
-
 .dropdown-menu:active .dropdown-item{
   color: var(--li-hover);
 }
