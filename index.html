@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/gameTab.css">
+
+    <title>Cut version of SMMO extension by Y0mu</title>
+  </head>
+  <body>
+    <div id="wrapper" class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">SimpleMMO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" id="gameLink" href="#">Game<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Wiki
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" id="homeWikiBtn">Home</a>
+                <a class="dropdown-item" href="#" id="arenaWikiBtn">Battle Arena</a>
+                <a class="dropdown-item" href="#" id="regWikiBtn">Regeneration</a>
+                <a class="dropdown-item" href="#" id="questsWikiBtn">List of Quests</a>
+                <a class="dropdown-item" href="#" id="helmetsWikiBtn">List of Helmets</a>
+                <a class="dropdown-item" href="#" id="amuletsWikiBtn">List of Amulets</a>
+                <a class="dropdown-item" href="#" id="armourWikiBtn">List of Armour</a>
+                <a class="dropdown-item" href="#" id="shieldsWikiBtn">List of Shields</a>
+                <a class="dropdown-item" href="#" id="weaponsWikiBtn">List of Weapons</a>
+                <a class="dropdown-item" href="#" id="bootsWikiBtn">List of Boots</a>
+                <a class="dropdown-item" href="#" id="petsWikiBtn">List of Pets</a>
+                <a class="dropdown-item" href="#" id="booksWikiBtn">List of Books</a>
+                <a class="dropdown-item" href="#" id="foodWikiBtn">List of Food</a>
+                <a class="dropdown-item" href="#" id="collectiblesWikiBtn">List of Collectibles</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="row h-100">
+        <div id="menu" class="col-xl-2">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#!" id="travelBtn"><i class="fas fa-compass"></i>Travel</a>
+            <a class="nav-link" href="#!" id="townBtn"><i class="fas fa-home"></i>Town</a>
+            <a class="nav-link" href="#!" id="arenaBtn"><i class="fas fa-fire-alt"></i>Battle Arena</a>
+            <a class="nav-link" href="#!" id="bossesBtn"><i class="fas fa-shield-alt"></i>World Bosses</a>
+            <a class="nav-link" href="#!" id="notificationsBtn"><i class="fas fa-exclamation-circle"></i>Notifications</a>
+            <a class="nav-link" href="#!" id="messagesBtn"><i class="fas fa-envelope"></i>Messages</a>
+            <a class="nav-link" href="#!" id="guildsBtn"><i class="fas fa-shield-alt"></i>Guilds</a>
+            <a class="nav-link" href="#!" id="questsBtn"><i class="fas fa-star"></i>Quests</a>
+            <a class="nav-link" href="#!" id="characterBtn"><i class="fas fa-user"></i>Character</a>
+            <a class="nav-link" href="#!" id="inventoryBtn"><i class="fas fa-bolt"></i>Inventory</a>
+            <a class="nav-link" href="#!" id="leaderboardsBtn"><i class="fas fa-chart-bar"></i>Leaderboards</a>
+            <a class="nav-link" href="#!" id="communityBtn"><i class="fas fa-user-friends"></i>Community</a>
+            <a class="nav-link" href="#!" id="friendsBtn"><i class="fas fa-heart"></i>Friends</a>
+            <a style="display:none;" class="nav-link" href="#!" id="profileBtn"><i class="fas fa-user"></i>Your Profile</a>
+            <a class="nav-link" href="#!" id="preferencesBtn"><i class="fas fa-wrench"></i>Preferences</a>
+            <a class="nav-link" style="display:none" href="#!" id="storeBtn"><i class="fas fa-dollar-sign"></i>Store</a>
+            <a class="nav-link" href="#!" id="aboutBtn"><i class="fas fa-info-circle"></i>About</a>
+            <a class="nav-link" href="#!" id="supportBtn"><i class="fas fa-hands-helping"></i>Support</a>
+          </nav>
+        </div>
+        <div id="game" class="col-xl-10">
+          <iframe id="game_frame" src="//simple-mmo.com"></iframe>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/gameTab.js"></script>
+  </body>
+</html>
