@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
         game_frame.src =  'https://simplemmo.fandom.com/wiki/Battle_arena';
         
     });
+    
+    regWikiBtn.addEventListener('click', function() {
+        game_frame.src =  'https://simplemmo.fandom.com/wiki/Regeneration';
+        
+    });
 
 
 
