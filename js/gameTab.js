@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       case "store":
         
-        game_frame.src = "//simple-mmo.com/diamondstore";
+        game_frame.src = "//simple-mmo.com/diamondstore/menu";
         break;
 
       case "friends":
