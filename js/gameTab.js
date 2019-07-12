@@ -179,6 +179,10 @@ document.addEventListener('DOMContentLoaded', function() {
     supportBtn.addEventListener('click', function() {
       menu("support");
     });
+    
+    aboutBtn.addEventListener('click', function() {
+      menu("about");
+    });
 
     gameLink.addEventListener('click', function() {
       menu("game");
