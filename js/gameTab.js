@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     storeBtn = document.getElementById("storeBtn");
     preferencesBtn = document.getElementById("preferencesBtn");
     supportBtn = document.getElementById("supportBtn");
-    supportBtn = document.getElementById("supportBtn");
+    aboutBtn = document.getElementById("aboutBtn");
     homeWikiBtn = document.getElementById("homeWikiBtn");
     questsWikiBtn = document.getElementById("questsWikiBtn");
     arenaWikiBtn = document.getElementById("arenaWikiBtn");
