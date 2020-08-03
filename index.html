@@ -1,18 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y0mu's home</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Y0mu's github</title>
-  </head>
-  <body>
-   
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body class="light">
+    <div class="alert">This page is still work in progres</div>
+    </div>
+    <div class="wrapper">
+        <div class="sidenavModal">
+            <div class="sidenav">
+                <div target="about" class="sidenavBlock">
+                    <div class="sidenavImageContainer">
+                        <img id="profilePicture" src="https://github.com/imy0mu.png" alt="">
+                    </div>
+                    <div class="sidenavInfo">
+                        About
+                    </div>
+                </div>
+                <div target="projects" class="sidenavBlock">
+                    <div class="sidenavImageContainer">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="sidenavInfo">
+                        Projects
+                    </div>
+                </div>
+                <div target="contact" class="sidenavBlock">
+                    <div class="sidenavImageContainer">
+                        <i class="far fa-address-card"></i>
+                    </div>
+                    <div class="sidenavInfo">
+                        Contact
+                    </div>
+                </div>
+                <div class="sidenavBottom">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input id="themeSwitch" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+            <div class="sidenavModalLeave"></div>
+        </div>
+        <div class="content">
+            <button class="btn" id="sidenavBtn"><i class="fas fa-bars"></i></button>
+            <div class="main" id="about">
+                <div class="section">
+                    <h1>Hello and Welcome to my page!</h1>
+                    <p>My nickname is <b>Y0mu</b> and I have been programming since I was 11. It is my hobby and I like it very much.</p>
+                    <p>I have graduated from IT highschool at 2019 and I am still studying to improve my knowledge and experience.</p>
+                    <p>I am 20 years old and I live in Czech Republic. This page is my personal page where I can show my work and progress.</p>
+                </div>
+            </div>
+            <div class="main" id="projects">
+                <div class="section">
+                    <h1>Projects</h1>
+                    <div class="project">
+                        <div class="imageContainer"></div>
+                        <div class="textContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main" id="contact">
+                <div class="section">
+                    <h1>Contacts</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/fontawesome.min.js"></script>
     <script src="js/jquery.min.js"></script>
-  </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
