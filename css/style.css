@@ -1,389 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+window.onload = (event) => {
+    changeTheme();
+};
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+window.onresize = function(event) {
+    modal.classList.remove("active");
+    sidenav.classList.remove("active");
+};
+
+var body = document.getElementsByTagName('body')[0];
+var modal = document.querySelector('.sidenavModal');
+var sidenav = document.querySelector('.sidenav');
+var sidenavLeave = document.querySelector('.sidenavModalLeave');
+
+document.getElementById('themeSwitch').addEventListener('change', (e) => {
+    if (event.target.checked) {
+        sidenav.style.transition = "0s";
+        body.classList.add("dark");
+        body.classList.remove("light");
+        setTimeout(function(){
+            sidenav.style.transition = "0.5s";
+        }, 100);
+    } else {
+        sidenav.style.transition = "0s";
+        body.classList.add("light");
+        body.classList.remove("dark");
+        setTimeout(function(){
+            sidenav.style.transition = "0.5s";
+        }, 100);
+    }
+})
+
+
+document.getElementById('sidenavBtn').addEventListener('click', (e) => {
+    modal.classList.add("active");
+    sidenav.classList.add("active");
+    sidenavLeave.classList.add("active");
+})
+
+sidenavLeave.addEventListener('click', (e) => {
+    modal.classList.remove("active");
+    sidenav.classList.remove("active");
+    sidenavLeave.classList.remove("active");
+})
+
+
+var options = document.querySelectorAll('.sidenavBlock');
+
+for (let i = 0; i < options.length; i++) {
+    options[i].addEventListener("click", function(e) {
+        let target = options[i].getAttribute('href');
+        modal.classList.remove("active");
+        sidenav.classList.remove("active");
+        sidenavLeave.classList.remove("active");
+        document.querySelector(target).scrollIntoView();
+    });
 }
 
-img, .sidenav, h1, p{
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
+function changeTheme(){
+    let hours = new Date().getHours()
+    let isDayTime = hours > 6 && hours < 20;
+    if(isDayTime == true){
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+    else if(isDayTime == true){
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }
 }
 
-.light{
-  --bg: #e7e7e7;
-  --text: #0f0f0f;
-  --sidenav: #ffffff;
-  --sidenav_hover: #efefef;
-  --sidenav_text_hover: #0090ff;
-  --content: #ffffff;
-  --sidenav_active: #e7e7e7;
+function CopyToClipboard(containerid) {
+    if (window.getSelection) {
+        if (window.getSelection().empty) { // Chrome
+            window.getSelection().empty();
+        } else if (window.getSelection().removeAllRanges) { // Firefox
+            window.getSelection().removeAllRanges();
+        }
+    } else if (document.selection) { // IE?
+        document.selection.empty();
+    }
+
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("copy");
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+    }
 }
 
-.dark{
-  --bg: #1a1a1a;
-  --text: #d1d1d1;
-  --sidenav: #242424;
-  --sidenav_hover: #181818;
-  --sidenav_text_hover: #3497e4;
-  --content: #2f2f2f;
-  --sidenav_active: #000000;
-}
-
-
-html,
-body {
-  font-size: 16px; /* default */
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Roboto', sans-serif;
-}
-
-
-
-.wrapper{
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-}
-
-
-.sidenav {
-    height: calc(100% - 16px);
-    width: 110px;
-    position: fixed;
-    background-color: var(--sidenav);
-    overflow: hidden;
-    z-index: 10;
-    
-}
-
-.sidenavModal{
-  position: fixed;
-  z-index: 10;
-}
-
-.sidenavModalLeave{
-  display: none;
-  position: fixed;
-  z-index: 10;
-  width: calc(100% - 126px);
-  height: calc(100% - 16px);
-  right: 8px;
-}
-
-.sidenavModalLeave.active{
-  display: block;
-}
-
-
-.sidenavModal.active{
-  width: calc(100% - 16px);
-  height: calc(100% - 16px);
-  background: #00000085;
-}
-
-.sidenav.active{
-  width: 110px;
-}
-
-.content {
-  width: calc(100% - 132px);
-  height: calc(100% - 16px);
-  position: fixed;
-  right: 8px;
-  background-color: var(--content);
-  overflow-x: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
-
-.sidenavBlock{
-    height: 150px;
-    padding: 4px;
-    overflow: hidden;
-    font-size: 1.5rem;
-    width: 110px;
-    display: block;
-    text-decoration: none;
-    color: var(--text);
-}
-
-.sidenavBlock:hover{
-  background: var(--sidenav_hover);
-  color: var(--sidenav_text_hover);
-  cursor: pointer;
-}
-
-.sidenavBlock.active{
-  background: var(--sidenav_active);
-}
-
-.sidenavBlock:hover #profilePicture{
-  filter: invert(1);
-}
-
-.sidenavImageContainer{
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50px;
-  text-align: center;
-}
-
-.sidenavImageContainer img{
-  width: 100%;
-}
-
-
-.sidenavImageContainer i{
-  position: relative;
-  top: 20%;
-  font-size: 4rem;
-}
-
-.sidenavInfo{
-  padding: 6px;
-  text-align: center;
-}
-
-.sidenavBottom {
-  position: absolute;
-  bottom: 0;
-  height: 35px;
-  width: 110px;
-  padding: 4px;
-}
-
-.sidenavBottom i {
-  font-size: 1.25rem;
-  float: left;
-  position: relative;
-  top: 3px;
-}
-
-.fa-sun{
-  color: #a1a60d;
-}
-
-.fa-moon{
-  color: #434d69;
-}
-
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  width: 50px;
-  height: 25px;
-  margin: 0 6px;
-  float: left;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
-
-.main{
-  padding: 12px;
-  width: 100%;
-  height: 100%;
-}
-
-
-.section{
-  text-align: center;
-  padding: 4px;
-  margin-top: 10%;
-}
-
-
-.contact{
-  width: 50%;
-  height: 150px;
-  float:left;
-
-}
-
-
-.btn{
-  right: 25px;
-  top: 25px;
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-/* Scroll bar  */
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgba(88, 88, 88, 0.089);
-
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(17 100 255 / 30%);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(40, 87, 173);
-  cursor: pointer;
-}
-
-.alert {
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 50;
-  text-align: center;
-  z-index: 1;
-}
-
-.contactItem{
-  width: 170px;
-  margin: 0px auto;
-  height: 150px;
-  padding: 30px 6px;
-  border-radius: 10px;
-  cursor: copy;
-}
-
-.contactID{
-  margin-top: 2px;
-}
-
-.contactItem:hover{
-  background-color: var(--sidenav_hover);
-  color: var(--sidenav_text_hover);
-}
-
-
-.iconContainer {
-  border-radius: 30px;
-  height: 60px;
-  width: 80px;
-  overflow: hidden;
-  margin: 0px auto;
-  text-align: center;
-}
-
-.iconContainer i {
-  font-size: 3rem;
-  margin-top: 8px;
-}
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .sidenav{
-    width: 0;
-    transition: 0.5s;
-  }
-  .content{
-    width: calc(100% - 16px);
-    right: auto;
-  }
-  .btn{
-    display: block;
-  }
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  .contact{
-    width: 100%;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
+(function() {
+    'use strict';
+  
+    var section = document.querySelectorAll(".main");
+    var sections = {};
+    var i = 0;
+  
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
+    });
+  
+    document.querySelector('.content').onscroll = function() {
+      var scrollPosition = document.querySelector('.content').scrollTop;
+      console.log("scrolled" + scrollPosition)
+      for (i in sections) {
+        if ((sections[i] - 150) <= scrollPosition) {
+          document.querySelector('a.active').classList.remove('active');
+          document.querySelector('a[href*=' + i + ']').classList.add('active');
+        }
+      }
+    };
+  })();
+  
