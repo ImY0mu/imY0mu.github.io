@@ -53,10 +53,6 @@ for (let i = 0; i < options.length; i++) {
         sidenav.classList.remove("active");
         sidenavLeave.classList.remove("active");
         document.querySelector(target).scrollIntoView();
-        for (let j = 0; j < options.length; j++) {
-            options[j].classList.remove('active');
-        }
-        document.querySelector(target + 'Btn').classList.add('active');
     });
 }
 
