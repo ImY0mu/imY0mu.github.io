@@ -246,7 +246,7 @@ input:checked + .slider:before {
 #about .section{
   text-align: center;
   padding: 4px;
-  margin-top: 25%;
+  margin-top: 10%;
 }
 
 .btn{
