@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-img, .sidenav{
+img, .sidenav, h1, p{
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -22,6 +22,7 @@ img, .sidenav{
   --sidenav_hover: #efefef;
   --sidenav_text_hover: #0090ff;
   --content: #ffffff;
+  --sidenav_active: #e7e7e7;
 }
 
 .dark{
@@ -31,6 +32,7 @@ img, .sidenav{
   --sidenav_hover: #181818;
   --sidenav_text_hover: #3497e4;
   --content: #2f2f2f;
+  --sidenav_active: #000000;
 }
 
 
@@ -110,12 +112,19 @@ body {
     overflow: hidden;
     font-size: 1.5rem;
     width: 110px;
+    display: block;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .sidenavBlock:hover{
   background: var(--sidenav_hover);
   color: var(--sidenav_text_hover);
   cursor: pointer;
+}
+
+.sidenavBlock.active{
+  background: var(--sidenav_active);
 }
 
 .sidenavBlock:hover #profilePicture{
