@@ -305,7 +305,7 @@ input:checked + .slider:before {
 .alert {
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: 2px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 50;
@@ -313,10 +313,10 @@ input:checked + .slider:before {
   z-index: 1;
 }
 
-.contactItem{
-  width: 170px;
+.contactItem {
+  width: 190px;
   margin: 0px auto;
-  height: 150px;
+  height: 160px;
   padding: 30px 6px;
   border-radius: 10px;
   cursor: copy;
@@ -346,6 +346,28 @@ input:checked + .slider:before {
   margin-top: 8px;
 }
 
+.project{
+  width: 50%;
+  float:left;
+}
+
+.imageContainer{
+  height: 400px;
+}
+
+#chatApp{
+  height: 450px;
+}
+
+#extApp{
+  height: 250px;
+}
+
+.imageContainer img{
+  height: 100%;
+  cursor: pointer;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -365,6 +387,11 @@ input:checked + .slider:before {
   }
   .contact{
     width: 100%;
+  }
+  
+  .project{
+    width: 100%;
+    float:left;
   }
 }
 
