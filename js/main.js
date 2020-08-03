@@ -47,12 +47,16 @@ sidenavLeave.addEventListener('click', (e) => {
 var options = document.querySelectorAll('.sidenavBlock');
 
 for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener("click", function() {
-        let target = options[i].getAttribute('target');
+    options[i].addEventListener("click", function(e) {
+        let target = options[i].getAttribute('href');
         modal.classList.remove("active");
         sidenav.classList.remove("active");
         sidenavLeave.classList.remove("active");
-        document.querySelector('#' + target).scrollIntoView();
+        document.querySelector(target).scrollIntoView();
+        for (let j = 0; j < options.length; j++) {
+            options[j].classList.remove('active');
+        }
+        document.querySelector(target + 'Btn').classList.add('active');
     });
 }
 
@@ -92,3 +96,27 @@ function CopyToClipboard(containerid) {
         document.execCommand("copy");
     }
 }
+
+(function() {
+    'use strict';
+  
+    var section = document.querySelectorAll(".main");
+    var sections = {};
+    var i = 0;
+  
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
+    });
+  
+    document.querySelector('.content').onscroll = function() {
+      var scrollPosition = document.querySelector('.content').scrollTop;
+      console.log("scrolled" + scrollPosition)
+      for (i in sections) {
+        if ((sections[i] - 150) <= scrollPosition) {
+          document.querySelector('a.active').classList.remove('active');
+          document.querySelector('a[href*=' + i + ']').classList.add('active');
+        }
+      }
+    };
+  })();
+  
