@@ -252,10 +252,14 @@ input:checked + .slider:before {
 }
 
 
+
 .section{
   text-align: center;
   padding: 4px;
-  margin-top: 10%;
+}
+
+#about .section{
+   margin-top: 10%;
 }
 
 
@@ -393,16 +397,25 @@ input:checked + .slider:before {
     width: 100%;
     float:left;
   }
+  
+  #projects{
+    height: 160%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
+@media only screen and (max-width: 768px) {
+  .project{
+    width: 100%;
+    float:left;
+  }
+  #projects{
+    height: 160%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
