@@ -243,11 +243,20 @@ input:checked + .slider:before {
 }
 
 
-#about .section{
+.section{
   text-align: center;
   padding: 4px;
   margin-top: 10%;
 }
+
+
+.contact{
+  width: 50%;
+  height: 150px;
+  float:left;
+
+}
+
 
 .btn{
   right: 25px;
@@ -295,6 +304,34 @@ input:checked + .slider:before {
   z-index: 1;
 }
 
+.contactItem{
+  width: 170px;
+  margin: 0px auto;
+  height: 150px;
+  padding: 30px 6px;
+  border-radius: 10px;
+  cursor: copy;
+}
+
+.contactItem:hover{
+  background-color: var(--sidenav_hover);
+  color: var(--sidenav_text_hover);
+}
+
+
+.iconContainer {
+  border-radius: 30px;
+  height: 60px;
+  width: 80px;
+  overflow: hidden;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.iconContainer i {
+  font-size: 3rem;
+  margin-top: 8px;
+}
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -312,6 +349,9 @@ input:checked + .slider:before {
   }
   ::-webkit-scrollbar {
     width: 6px;
+  }
+  .contact{
+    width: 100%;
   }
 }
 
