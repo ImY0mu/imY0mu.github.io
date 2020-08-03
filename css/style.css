@@ -310,7 +310,10 @@ input:checked + .slider:before {
   height: 150px;
   padding: 30px 6px;
   border-radius: 10px;
-  cursor: copy;
+}
+
+.contactID{
+  cursor: pointer;
 }
 
 .contactItem:hover{
