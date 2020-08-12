@@ -65,6 +65,7 @@ button{
 
 button:hover{
     background-color: var(--sidenav_text_hover);
+    cursor: pointer;
 }
 
 nav{
