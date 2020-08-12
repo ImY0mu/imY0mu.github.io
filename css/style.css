@@ -326,7 +326,18 @@ input:checked + .slider:before {
   cursor: copy;
 }
 
-.textContainer:hover{
+.textContainer{
+  margin: 10px 0;
+}
+
+.textContainer a{
+  font-size: 1.17em;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.textContainer a:hover{
   color: var(--sidenav_text_hover);
   cursor: pointer;
 }
