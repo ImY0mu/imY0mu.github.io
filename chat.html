@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y0mu's home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body class="light">
+    <div class="alert">This page is still work in progres</div>
+    </div>
+    <div class="wrapper">
+        <div class="sidenavModal">
+            <div class="sidenav">
+                <a href="#about"id="aboutBtn" class="sidenavBlock active">
+                    <div class="sidenavImageContainer">
+                        <img id="profilePicture" src="https://github.com/imy0mu.png" alt="">
+                    </div>
+                    <div class="sidenavInfo">
+                        About
+                    </div>
+                </a>
+                <a href="#projects" id="projectsBtn" class="sidenavBlock">
+                    <div class="sidenavImageContainer">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="sidenavInfo">
+                        Features
+                    </div>
+                </a>
+                <a  href="#contact" id="contactBtn" class="sidenavBlock">
+                    <div class="sidenavImageContainer">
+                        <i class="far fa-address-card"></i>
+                    </div>
+                    <div class="sidenavInfo">
+                        Download
+                    </div>
+                </a>
+                <div class="sidenavBottom">
+                    <i class="fas fa-sun"></i>
+                    <label class="switch">
+                        <input id="themeSwitch" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+            <div class="sidenavModalLeave"></div>
+        </div>
+        <div class="content">
+            <button class="btn" id="sidenavBtn"><i class="fas fa-bars"></i></button>
+            <div class="main" id="about">
+                <div class="section">
+                    <h1>SimpleMMO Desktop Chat Client</h1>
+                    <p>Created with players and their dislike of web app's chat in mind. </p>
+                </div>
+            </div>
+            <div class="main" id="projects">
+                <div class="section">
+                    <h1>On-going projects</h1>
+                    <h2>SimpleMMO add-ons</h2>
+                    <div class="project">
+                        <div class="textContainer"><h3>SimpleMMO Chat Client</h3></div>
+                        <div class="imageContainer" id="chatApp"><img onclick="window.open(this.src)" src="img/chatApp.png" alt=""></div>
+                        
+                    </div>
+                    <div class="project">
+                        <div class="textContainer"><h3>SimpleMMO Notifications (Chrome extension)</h3></div>
+                        <div class="imageContainer" id="extApp"><img onclick="window.open(this.src)" src="img/extApp.png" alt=""></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="main" id="contact">
+                <div class="section">
+                    <h1>Contact</h1>
+                    <div title="Click to copy" onclick="CopyToClipboard('discord')" class="contact">
+                        <div class="contactItem">
+                            <div class="iconContainer">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contactID">Discord</div>
+                            <div class="contactID" id="discord">Y0mu#0703</div>
+                        </div>
+                    </div>
+                    <div title="Click to copy" onclick="CopyToClipboard('email')" class="contact">
+                        <div class="contactItem">
+                            <div class="iconContainer">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contactID">Email</div>
+                            <div class="contactID" id="email">justy0mu@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/fontawesome.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
