@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.light{
+    --bg: #e7e7e7;
+    --text: #0f0f0f;
+    --sidenav: #ffffff;
+    --sidenav_hover: #efefef;
+    --sidenav_text_hover: #0090ff;
+    --content: #ffffff;
+    --sidenav_active: #e7e7e7;
+  }
+  
+  .dark{
+    --bg: #1a1a1a;
+    --text: #d1d1d1;
+    --sidenav: #242424;
+    --sidenav_hover: #181818;
+    --sidenav_text_hover: #3497e4;
+    --content: #2f2f2f;
+    --sidenav_active: #000000;
+  }
+
+html,
+body {
+  font-size: 16px; /* default */
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper p{
+    font-size: 1.2rem;
+    padding: 6px;
+}
+
+#about{
+    font-family: cursive;
+}
+
+#features p{
+    font-size: 0.95rem;
+}
+
+
+button{
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    background-color: var(--sidenav_text_hover);
+}
+
+nav{
+    position: relative;
+    margin: 60px auto 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+  
+li {
+    display: inline-block;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+  
+a{
+    color: white;
+}
+
+a:hover {
+    color: rgb(44, 69, 207);
+}
+
+a.active {
+    color: rgb(44, 64, 175);
+}
+
+
+.content{
+    height: calc( 100vh - 90px );
+    overflow-y: auto;
+}
+
+.container{
+    display: none;
+}
+
+.container.active{
+    display: block;
+}
+
+/* Scroll bar  */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(88, 88, 88, 0.089);
+  
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(17 100 255 / 30%);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 87, 173);
+    cursor: pointer;
+  }
+  
+
+.homeLink{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 2rem;
+}

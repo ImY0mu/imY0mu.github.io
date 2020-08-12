@@ -326,6 +326,11 @@ input:checked + .slider:before {
   cursor: copy;
 }
 
+.textContainer:hover{
+  color: var(--sidenav_text_hover);
+  cursor: pointer;
+}
+
 .contactID{
   margin-top: 2px;
 }
