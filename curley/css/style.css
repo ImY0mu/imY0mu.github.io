@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body, html{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-image: -webkit-linear-gradient(30deg, rgb(13, 0, 255) 0%, rgb(223, 0, 251) 48.3333%, rgb(223, 0, 247) 49.1667%, rgb(255, 0, 0) 99.5833%);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    height: 100%;
+}
+
+.wrapper{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.card{
+    margin-top: 50px;
+    height: 100%;
+    width: 70vw;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: rgb(46 112 254);
+    transition: ease-in-out 0.2s;
+}
+
+.card:hover{
+    margin: 25px auto;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card-content{
+    margin: 0 16px 16px 16px;
+    color: white;
+}
+
+a{
+    color: #80ff00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #abff57;
+}
+
+.dancer:first-of-type{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.card-image img{
+    width: 100%;
+    max-height: 300px;
+}
+
+h3{
+    font-size: 1.17rem;
+    margin: 0.5rem;
+}
+
+.sizeA{
+    font-size: 1rem;
+}
+
+.sizeB{
+    font-size: 0.8rem;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body, html{
+        font-size: 36px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
