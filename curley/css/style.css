@@ -34,13 +34,13 @@ body, html{
     height: 100%;
     width: 70vw;
     max-width: 600px;
-    margin: 30px auto;
+    margin: 10% auto;
     background-color: rgb(46 112 254);
     transition: ease-in-out 0.2s;
 }
 
 .card:hover{
-    margin: 25px auto;
+    margin: 9% auto;
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -61,7 +61,7 @@ a:hover{
 }
 
 .dancer{
-    margin: 30px auto;
+    margin: 10% auto;
 }
 
 .dancer:first-of-type{
