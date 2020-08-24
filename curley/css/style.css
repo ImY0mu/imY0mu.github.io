@@ -38,6 +38,7 @@ body, html{
     margin: 30px auto;
     background-color: rgb(46 112 254);
     transition: ease-in-out 0.2s;
+    height: ;
 }
 
 .card:hover{
@@ -59,10 +60,6 @@ a{
 
 a:hover{
     color: #abff57;
-}
-
-.dancer{
-      margin: 100px auto;
 }
 
 .dancer:first-of-type{
@@ -98,15 +95,21 @@ h3{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    body, html{
+        font-size: 32px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    body, html{
+        font-size: 30px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+    body, html{
+        font-size: 26px;
+    }
 }
