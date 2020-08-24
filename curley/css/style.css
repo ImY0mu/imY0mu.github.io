@@ -38,7 +38,6 @@ body, html{
     margin: 30px auto;
     background-color: rgb(46 112 254);
     transition: ease-in-out 0.2s;
-    height: ;
 }
 
 .card:hover{
