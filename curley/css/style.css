@@ -20,27 +20,24 @@ body, html{
     background-position: center;
 }
 
-.wrapper{
+.wrapper {
     text-align: center;
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 
 .card{
-    margin-top: 50px;
     height: 100%;
     width: 70vw;
     max-width: 600px;
-    margin: 10% auto;
+    margin: 5% auto;
     background-color: rgb(46 112 254);
     transition: ease-in-out 0.2s;
+    position: relative;
 }
 
 .card:hover{
-    margin: 9% auto;
+    margin: 4% auto;
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -48,6 +45,7 @@ body, html{
 .card-content{
     margin: 0 16px 16px 16px;
     color: white;
+    display: grid;
 }
 
 a{
@@ -61,12 +59,19 @@ a:hover{
 }
 
 .dancer{
-    margin: 10% auto;
+    width: 150px;
+    position: absolute;
+    right: 0;
+}
+
+.dancer img{
+    width: 100%;
 }
 
 .dancer:first-of-type{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    left: 0;
 }
 
 .card-image img{
