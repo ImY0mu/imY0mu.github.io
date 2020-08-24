@@ -59,9 +59,9 @@ a:hover{
 }
 
 .dancer{
-    width: 30%;
+    width: 150px;
     position: absolute;
-    right: -25px;
+    right: 0;
 }
 
 .dancer img{
@@ -71,7 +71,7 @@ a:hover{
 .dancer:first-of-type{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    left: -25px;
+    left: 0;
 }
 
 .card-image img{
