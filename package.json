@@ -1,0 +1,20 @@
+{
+  "name": "y0mu-homepage",
+  "version": "0.0.1-beta",
+  "productName": "Y0mu Github homepage",
+  "description": "Y0mu's Github homepage",
+  "keywords": [
+    "SMMO",
+    "SimpleMMO",
+    "Hub",
+    "SMMO-mobile",
+    "SMMO-chat",
+    "SMMO-guildPvP",
+    "Y0mu"
+  ],
+  "author": "Y0mu",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.9"
+  }
+}
