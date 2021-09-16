@@ -10,9 +10,16 @@
     <title>Y0mu's coding cave</title>
 </head>
 <body class="bg-white dark:bg-gray-900 flex flex-col h-screen w-screen overflow-y-auto overflow-x-hidden">
-    <div class="bg-indigo-600 dark:bg-indigo-800">
+    <div class="">
         <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto p-4 flex text-white font-medium">
-            Page is still in development
+           <div class="ml-auto">
+                <button class="outline-none border-0" onclick="changeLanguage('CZ')">
+                    <img src="assets/images/flags/cz.png" alt="Czech Flag" class="">
+                </button>
+                <button class="outline-none border-0" onclick="changeLanguage('EN')">
+                    <img src="assets/images/flags/us.png" alt="United States Flag" class="">
+                </button>
+           </div>
         </div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-800">
@@ -21,8 +28,8 @@
                 <img src="assets/logo.png" alt="website logo">
             </div>
             <div class="md:ml-auto w-full md:w-auto flex self-center">
-                <a href="https://www.patreon.com/y0mu" target="_blank" class="block font-medium text-green-500 hover:text-white hover:bg-green-600 dark:hover:text-black md:mr-4 border-2 border-green-600 px-4 py-2 rounded-full transition duration-300 ease-in-out">Become a Patreon</a> 
-                <a href="#" class="block font-medium text-indigo-500  hover:text-white hover:bg-indigo-600 dark:hover:text-black md:mr-4 md:ml-0 ml-auto border-2 border-indigo-600 px-4 py-2 rounded-full transition duration-300 ease-in-out">Contact me</a>
+                <a id="button_0" href="https://www.patreon.com/y0mu" target="_blank" class="block font-medium text-green-500 hover:text-white hover:bg-green-600 dark:hover:text-black md:mr-4 border-2 border-green-600 px-4 py-2 rounded-full transition duration-300 ease-in-out">Become a Patreon</a> 
+                <a id="button_1" href="#" class="hidden -block font-medium text-indigo-500  hover:text-white hover:bg-indigo-600 dark:hover:text-black md:mr-4 md:ml-0 ml-auto border-2 border-indigo-600 px-4 py-2 rounded-full transition duration-300 ease-in-out">Contact me</a>
             </div>
         </div>
     </div>
@@ -30,38 +37,91 @@
         <div class="bg-gray-100 dark:bg-gray-800">
             <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col">
                 <div class="h-screen py-24 text-center">
-                    <div class="title font-bold text-3xl sm:text-4xl lg:text-6xl text-center mt-8 px-4">Front-end & Electron App Developer</div>
-                    <div class="font-light text-base sm:text-lg md:text-xl lg:text-2xl text-center py-8 tracking-wide">I code with passion and love.</div>
+                    <div class="title font-bold text-3xl sm:text-4xl lg:text-6xl text-center mt-8 px-4 tracking-wider" id="string_0">Front-end Developer</div>
+                    <div class="font-light text-base sm:text-lg md:text-xl lg:text-2xl text-center py-8 tracking-wide" id="string_1">I code with passion and love.</div>
                     <div class="max-h-52 w-52 overflow-hidden rounded-full self-center mx-auto bg-gray-200 dark:bg-gray-700 mt-4">
                         <img class="h-full" src="assets/images/y0mu_portrait_no_bg-export.png" alt="Y0mu Pixel Art Portrait">
                     </div>
-                    <a href="#" class="block text-center w-44 font-medium mt-8 px-4 py-2 rounded-full bg-transparent border-2 border-yellow-600 text-yellow-600 hover:text-gray-100 dark:hover:text-gray-800 hover:bg-yellow-600 mx-auto transition duration-300 ease-in-out">
+                    <a id="button_2" href="#" class="hidden -block text-center w-44 font-medium mt-8 px-4 py-2 rounded-full bg-transparent border-2 border-yellow-600 text-yellow-600 hover:text-gray-100 dark:hover:text-gray-800 hover:bg-yellow-600 mx-auto transition duration-300 ease-in-out">
                         See my work
                     </a>
+                    <div class="mt-12 font-bold tracking-wider select-all">
+                        contact.y0mu@gmail.com
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="bg-indigo-600 dark:bg-indigo-800 dark:text-gray-100 text-gray-200">
-            <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col">
-                <div class="py-32 flex flex-col self-center">
-                    <div class="text-center font-semibold text-3xl px-4">
-                        Hello, I'm Y0mu. Pleased to meet you.
+        <div class="dark:bg-gray-800 bg-gray-100 dark:text-gray-100 text-gray-200">
+            <div class="bg-indigo-600 dark:bg-indigo-800 dark:text-gray-100 text-gray-200">
+                <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col ">
+                    <div class="pt-32 pb-16 flex flex-col self-center">
+                        <div class="text-center font-semibold text-3xl px-4"  id="string_2">
+                            Hello, I'm Y0mu. Pleased to meet you.
+                        </div>
+                        <div class="text-center text-lg mt-8 px-4"  id="string_3">
+                            Since young age I have been deeply interested in web design and web development. 
+                        </div>
                     </div>
-                    <div class="text-center text-lg max-w-prose mt-8 px-4">
-                        Since young age I have been deeply interested in web design and web development. I have done websites, and some electron apps specifically for my favorite <a class="text-indigo-200 hover:text-indigo-400 dark:text-indigo-300 dark:hover:text-indigo-500" target="_blank" href="https://web.simple-mmo.com">community</a>.
+                    <div class="mx-auto max-w-lg sm:max-w-xl md:max-w-2xl w-full h-24 sm:h-16 sm:rounded-t-lg dark:bg-gray-900 bg-white dark:text-gray-100 text-gray-900">
+                        <div class="grid grid-cols-2 h-full text-center font-bold title text-base md:text-xl tracking-wider mt-2">
+                            <div class="border-r border-gray-300 dark:border-gray-700 py-4 px-4 md:px-6 lg:px-12"  id="string_4">
+                                Front-end Developer
+                            </div>
+                            <div class="py-4 px-4 md:px-6 lg:px-12"  id="string_5">
+                                Experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col">
+                <div class="mx-auto max-w-lg sm:max-w-xl md:max-w-2xl w-full dark:bg-gray-900 bg-white sm:rounded-b-lg sm:border border-t-0 border-gray-300 dark:border-gray-700">
+                    <div class="grid grid-cols-2 h-full text-center text-base dark:text-gray-100 text-gray-900">
+                        <div class="border-r border-gray-300 dark:border-gray-700 py-4 pb-8 px-4 md:px-6 lg:px-12 grid grid-rows-2">
+                            <div class="" id="string_6">
+                                I like to code things from scratch. Simple yet elegant design is what I strive for.
+                            </div>
+                            <div class="">
+                                <div class="font-medium mt-4"  id="string_7">Websites</div>
+                                <div class="text-indigo-500 mt-2"><a target="_blank" href="http://www.kamenictvipetrek.cz" id="website_0">Stonemasonry Petřek</a></div>
+                                <div class="text-indigo-500 mt-2"></div>
+                                <div class="text-indigo-500 mt-2"></div>
+                            </div>
+                        </div>
+                        <div class="py-4 pb-8 px-4 md:px-6 lg:px-12 grid grid-rows-2">
+                            <div class="">
+                                <div class="font-medium" id="string_8">I can speak</div>
+                                <div class="text-gray-500 mt-2">HTML, CSS, TailwindCSS</div>
+                                <div class="text-gray-500 mt-2">JS, Electron</div>
+                            </div>
+                            <div class="">
+                                <div class="font-medium mt-4"  id="string_9">Windows Apps</div>
+                                <div class="text-indigo-500 mt-2">SMMO App Hub</div>
+                                <div class="text-indigo-500 mt-2">SMMO Chat Client</div>
+                                <div class="text-indigo-500 mt-2">SMMO Simulation</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="bg-gray-100 dark:bg-gray-800">
+        <div class="w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col">
+            <div class="py-24 text-center">
+                
+            </div>
+        </div>
+    </div>
 
-    <div class="fixed bottom-8 right-0">
-        <div class="p-2 bg-white dark:bg-gray-900 rounded-l-md">
+    <div class="fixed bottom-8 right-0 group">
+        <div class="p-2 bg-white dark:bg-gray-900 rounded-l-full">
+            
             <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                 <input onchange="changeTheme(this)" type="checkbox" name="color-scheme" id="color-scheme" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                 <label for="color-scheme" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
             </div>
-            <label for="toggle" class="text-xs text-gray-700 dark:text-gray-300">Theme</label>
+            <label for="toggle" class="text-xs text-gray-700 dark:text-gray-300" id="button_3">Theme</label>
         </div>
     </div>
     <script src="assets/js/main.js"></script>
