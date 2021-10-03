@@ -7,12 +7,10 @@ pageText["CZ"] = {
     "Programuji s vášní a láskou.",
     "Dobrý den, říkám si Y0mu. Rád tě poznávám.",
     "Od mého dětství se hluboce zajímám o web design a vývoj webových aplikací.",
-    "Front-end",
-    "Zkušenosti",
+    "Front-end Developer",
     "Rád programuji věci od nuly. Usiluji o jednoduchý, ale elegantní design.",
-    "Stránky",
     "Zvládám",
-    "Aplikace pro Windows"
+    "Stránky",
   ],
   buttons: [
     "Patreon",
@@ -33,11 +31,9 @@ pageText["EN"] = {
     "Hello, I'm Y0mu. Pleased to meet you.",
     "Since young age I have been deeply interested in web design and web development.",
     "Front-end Developer",
-    "Websites",
     "I like to code things from scratch. Simple yet elegant design is what I strive for.",
-    "Experience",
     "I can speak",
-    "Windows Apps"
+    "Websites",
   ],
   buttons: [
     "Become a Patreon",
